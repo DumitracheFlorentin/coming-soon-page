@@ -48,6 +48,29 @@
       flex-direction: column;
     }
 
+    &__inputForm {
+      position: relative;
+
+      @include breakpoint-down(small) {
+        width: 70%;
+      }
+    }
+
+    &__error {
+      position: absolute;
+      color: var(--light-red);
+      padding-left: 1rem;
+      margin-top: 0.3rem;
+      font-size: 0.7rem;
+
+      @include breakpoint-down(small) {
+        position: static;
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        text-align: center;
+      }
+    }
+
     &__input {
       padding: 0.6rem 1rem;
       width: 17rem;
@@ -56,7 +79,7 @@
       margin-right: 0.75rem;
 
       @include breakpoint-down(small) {
-        width: 70%;
+        width: 100%;
         margin-bottom: 0.75rem;
       }
 
@@ -93,7 +116,7 @@
 
     @include breakpoint-down(small) {
       width: 95%;
-      margin-bottom: 6rem;
+      margin-bottom: 5rem;
     }
   }
 
@@ -110,6 +133,8 @@
         display: inline-block;
         border-radius: 60px;
         box-shadow: 0px 0px 2px rgba(136, 136, 136, 0.602);
+        transition: all 0.6s ease-in-out;
+        cursor: pointer;
 
         &:first-child {
           padding: 0.5em 0.7em;
@@ -121,6 +146,11 @@
 
         &:not(:last-child) {
           margin-right: 1rem;
+        }
+
+        &:hover {
+          background-color: var(--blue);
+          color: white;
         }
       }
     }
