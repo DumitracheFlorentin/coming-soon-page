@@ -57,6 +57,7 @@
     }
 
     &__error {
+      display: none;
       position: absolute;
       color: var(--light-red);
       padding-left: 1rem;
